@@ -29,3 +29,5 @@ john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash_to_crack.
 wget https://raw.githubusercontent.com/magnumripper/JohnTheRipper/bleeding-jumbo/run/ssh2john.py
 
 python ssh2john.py idrsa.id_rsa > key_hash
+
+john --wordlist=/usr/share/wordlists/rockyou.txt key_hash
