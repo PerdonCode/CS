@@ -31,3 +31,11 @@ wget https://raw.githubusercontent.com/magnumripper/JohnTheRipper/bleeding-jumbo
 python ssh2john.py idrsa.id_rsa > key_hash
 
 john --wordlist=/usr/share/wordlists/rockyou.txt key_hash
+
+#crack GPG
+
+upzip gpg.zip
+
+gpg --import tryhackme.key
+
+gpg --output message.txt --decrypt message.gpg
